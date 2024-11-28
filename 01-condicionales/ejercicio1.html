@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+<script>
+  let a = Number(prompt("Sea ax² + bx + c = 0\nIngrese el valor de a"));
+  let b = Number(prompt("Sea ax² + bx + c = 0\nIngrese el valor de b"));
+  let c = Number(prompt("Sea ax² + bx + c = 0\nIngrese el valor de c"));
+
+  sqrt= b**2-4*a*c
+
+  x1 = (-b+Math.sqrt(sqrt))/(2*a)
+  x2 = (-b-Math.sqrt(sqrt))/(2*a)
+
+  if (a !=0 && sqrt > 0) {
+    document.write(`Sea ${a}x<sup>2</sup> + ${b}x + ${c} = 0<hr>`);
+    document.write(`x<sub>1</sub> = ${x1}<br>`);
+    document.write(`x<sub>2</sub> = ${x2}`);
+  } else {
+    document.write(`Sea ${a}x² + ${b}x + ${c} = 0<hr>`);
+    document.write("x ∉ ℝ")
+  }
+</script>
+</html>

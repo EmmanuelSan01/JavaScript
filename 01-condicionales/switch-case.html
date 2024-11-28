@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+<script>
+  let country = prompt("¿En qué país nació?");
+
+  // if (country.toLowerCase() === "colombia") {
+  //   alert("Su gentilicio es colombiano");
+  // } else if (country.toLowerCase() === "venezuela") {
+  //   alert("Su gentilicio es venezolano");
+  // } else if (country.toLowerCase() === "ecuador") {
+  //   alert("Su gentilicio es ecuatoriano");;
+  // } else if (country.toLowerCase() === "argentina") {
+  //   alert("Su gentilicio es argentino");;
+  // }
+
+  switch(country.toLowerCase()) {
+    case "colombia":
+      alert("Su gentilicio es colombiano");
+      break;
+    case "venezuela":
+      alert("Su gentilicio es venezolano");
+      break;
+    case "ecuador":
+      alert("Su gentilicio es ecuatoriano");
+      break;
+    case "argentina":
+      alert("Su gentilicio es argentino");
+      break;
+    default:
+      alert("No eres latino");
+  }
+</script>
+</html>
