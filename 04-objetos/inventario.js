@@ -39,7 +39,7 @@ function agrProd() {
   producto.cantidad= cantidad;
 
   console.log(producto);
-  // menu();
+  menu();
 }
 
 function eliProd() {
@@ -58,4 +58,11 @@ function eliProd() {
 function mosInve() {
   console.log(inventario);
   // menu();
+}
+
+function busProd() {
+  let nombre = prompt("Buscar un producto en el inventario\n\nIngrese el nombre del producto");
+  const prodBuscar = nombre;
+    const index = inventario.findIndex( producto => producto.nombre === prodBuscar );
+    console.log(inventario[index]);
 }
