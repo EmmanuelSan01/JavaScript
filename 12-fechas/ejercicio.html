@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cobrar multa</title>
+</head>
+<body>
+    <h1>Formulario para el cálculo de multas</h1>
+    <form action="" onsubmit="return false" id="formu">
+        <label for="pactada">Fecha de entrega pactada: </label>
+        <input type="date" name="pactada" id="pactada">
+        <br><br>
+        <label for="real">Fecha de entrega real: </label>
+        <input type="date" name="real" id="real">
+        <button onclick="obtenerDatos()">Enviar</button>
+    </form>
+</body>
+<script>
+    function obtenerDatos() {
+        const formu = document.forms["formu"];
+        const datosFormu = new FormData(formu);
+        datosFormu.forEach((v, k) => console.log(k + " -> " + v));
+        const objFormu = Object.fromEntries(datosFormu.entries());
+        const serialform = JSON.stringify(objFormu);
+        console.log(serialform);
+    }
+
+    const fData = new FormData();
+    for(const [llave, valor] of fData) {
+        console.log(llave + " : " + valor);
+        console.log(fData.get("pactada"));
+    }  
+    
+    // formData.has(key) -> ture/false si la llave está en formData 
+    // formData.delete(key) -> elimina la [key, value] si esxiste
+    // formData.get(key) -> devuelve el valor de la llave
+    // formData.getAll() -> obtiene todos los [key, value]
+</script>
