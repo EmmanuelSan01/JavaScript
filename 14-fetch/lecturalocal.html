@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Fetch - Peticiones Locales</title>
+    <style>
+        table {
+            width: 50%;
+        }
+
+        .valedad {
+            text-align: right;
+        }
+
+        .tdimg {
+            text-align: center;
+        }
+
+        .imgsexo {
+            width: 2em;
+            align-items: center;
+        }
+    </style>
+    <script type="module" src="lecturalocal.js"></script>
+</head>
+<body>
+    <h1>API FETCH - Peticiones locales</h1>
+    <hr>
+    <br>
+    <button id="mostrartxt">Muestre el contenido del texto</button>
+    <div id="contenidotexto">
+        
+    </div>
+    <br>
+    <hr>
+    <br>
+    <button id="mostrarjson">Mostrar el archivo JSON en formato tabla</button>
+    <br><br>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Team</th>
+                <th>Edad</th>
+                <th>Foto</th>
+            </tr>
+        </thead>
+        <tbody id="datostabla">
+
+        </tbody>
+        
+    </table>
+</body>
+</html>
