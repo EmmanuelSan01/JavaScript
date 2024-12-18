@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <div id="contenedor">
+        <h2>Ejemplo Eventos JS - Aumentar y Disminuir</h2>
+    <br>
+    <h1>Contador</h1>
+    <button id="aumentar">Aumentar</button>
+    <button id="disminuir">Disminuir</button>
+    <h2 id="contador">Contador:</h2>
+    </div>
+    
+</body>
+<script>
+    const aumentar = document.getElementById("aumentar");
+    const disminuir = document.getElementById("disminuir");
+    const contador = document.getElementById("contador");
+
+    let i = 0;
+    function sum () {
+        i++;
+        contador.textContent = `Contador: ${i}`;
+    }
+
+    function res () {
+        i--;
+        contador.textContent = `Contador: ${i}`;
+    }
+
+    aumentar.addEventListener("click", sum);
+    disminuir.addEventListener("click", res);
+</script>
+</html>

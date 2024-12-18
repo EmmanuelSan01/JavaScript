@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>Saludar</button>
+</body>
+<script>
+    const boton = document.querySelector("button");
+    
+    const changeColor = () => boton.classList.toggle("red");
+    const showMessage = () => {
+        alert("Botón clickeado");
+        boton.removeEventListener("click", showMessage);
+    }
+
+    boton.addEventListener("click", showMessage);
+    boton.addEventListener("click", changeColor);
+</script>
+</html>
